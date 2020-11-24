@@ -24,13 +24,17 @@
 def solution(n, lost, reserve):
     answer = n - len(lost)
 
+    _lost = list(set(lost) - set(reserve))
+    _reserve = list(set(reserve) - set(lost))
+    #
+    # print(_lost)
+    # print(_reserve)
+    for value1 in _reserve:
 
-    for value1 in reserve:
-
-        for key2, value2 in enumerate(lost):
+        for key2, value2 in enumerate(_lost):
 
             if value1-1 <= value2 <= value1+1:
-                del lost[key2]
+                del _lost[key2]
                 answer += 1
                 break
 
@@ -40,4 +44,4 @@ def solution(n, lost, reserve):
 print(solution(5, [2, 4], [1, 3, 5]))
 print(solution(5, [2, 4], [3]))
 print(solution(3, [3], [1]))
-print(solution(10, [1, 2, 3], [4, 5, 6, 7]))
+print(solution(10, [1, 2, 3], [3, 4, 5, 6, 7]))

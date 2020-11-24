@@ -37,6 +37,7 @@ def solution(n, lost, reserve):
 print(solution(5, [2, 4], [1, 3, 5]))
 print(solution(5, [2, 4], [3]))
 print(solution(3, [3], [1]))
+print(solution(10, [1, 2, 3], [2, 4, 5, 8]))
 
 
 '''
