@@ -8,18 +8,25 @@ def solution(n, lost, reserve):
         have[i-1] += 1
 
     for i in range(len(have)):
+        # 체육복이 없으면
         if have[i] == 0:
+            # 없고 첫번째면
             if i == 0:
+                # 오른쪽 아이가 가지고 있나?
                 if have[i + 1] > 1:
                     have[i + 1] -= 1
                     have[i] += 1
+            # 없고 마지막이면
             elif i == (len(have) - 1):
+                # 왼쪽 아이가 가지고 있나?
                 if have[i - 1] > 1:
                     have[i - 1] -= 1
                     have[i] += 1
+            # 왼쪽 아이가 가지고 있으면
             elif have[i-1] > 1:
                 have[i - 1] -= 1
                 have[i] += 1
+            # 오른쪽 아이가 가지고 있으면
             elif have[i+1] > 1:
                 have[i + 1] -= 1
                 have[i] += 1

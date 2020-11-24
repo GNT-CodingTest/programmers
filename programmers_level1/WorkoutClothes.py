@@ -24,12 +24,16 @@
 def solution(n, lost, reserve):
     answer = n - len(lost)
 
+
     for value1 in reserve:
+
         for key2, value2 in enumerate(lost):
+
             if value1-1 <= value2 <= value1+1:
                 del lost[key2]
                 answer += 1
                 break
+
     return answer
 
 
