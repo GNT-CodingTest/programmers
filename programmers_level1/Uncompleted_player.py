@@ -36,23 +36,23 @@ def solution3(participant, completion):
     return answer
 
 
-# startTime = timeit.default_timer()
-#
-# print(solution(['leo', 'kiki', 'eden'], ['eden', 'kiki']))
-# print(solution(['marina', 'josipa', 'nikola', 'vinko', 'filipa'], ['josipa', 'filipa', 'marina', 'nikola']))
-# print(solution(['mislav', 'stanko', 'mislav', 'ana'], ['stanko', 'ana', 'mislav']))
-#
-# endTime = timeit.default_timer()
-#
-# print(f"{endTime - startTime}초")
-
-
 startTime = timeit.default_timer()
 
-print(solution3(['leo', 'kiki', 'eden'], ['eden', 'kiki']))
-print(solution3(['marina', 'josipa', 'nikola', 'vinko', 'filipa'], ['josipa', 'filipa', 'marina', 'nikola']))
-print(solution3(['mislav', 'stanko', 'mislav', 'ana'], ['stanko', 'ana', 'mislav']))
+print(solution(['leo', 'kiki', 'eden'], ['eden', 'kiki']))
+print(solution(['marina', 'josipa', 'nikola', 'vinko', 'filipa'], ['josipa', 'filipa', 'marina', 'nikola']))
+print(solution(['mislav', 'stanko', 'mislav', 'ana'], ['stanko', 'ana', 'mislav']))
 
 endTime = timeit.default_timer()
 
 print(f"{endTime - startTime}초")
+
+
+# startTime = timeit.default_timer()
+#
+# print(solution3(['leo', 'kiki', 'eden'], ['eden', 'kiki']))
+# print(solution3(['marina', 'josipa', 'nikola', 'vinko', 'filipa'], ['josipa', 'filipa', 'marina', 'nikola']))
+# print(solution3(['mislav', 'stanko', 'mislav', 'ana'], ['stanko', 'ana', 'mislav']))
+#
+# endTime = timeit.default_timer()
+#
+# print(f"{endTime - startTime}초")
