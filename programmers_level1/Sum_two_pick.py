@@ -5,6 +5,7 @@
 # [2,5,7,9,12]
 
 # 100/100
+
 def solution(numbers):
     answer = []
     for key1, value1 in enumerate(numbers[:len(numbers)-1]):  # 2, 1, 3, 4
@@ -17,6 +18,7 @@ def solution(numbers):
 
 
 # Error
+
 # def solution(numbers):
 #     answer = []
 #     temp = []
