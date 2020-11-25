@@ -35,7 +35,7 @@ def solution3(s):  # 위의 솔루션과 비슷하지만 훨씬 간결함
 
 print(solution1('가나다라마'))
 print(solution1('pypy'))
-print(solution2('가나다라마'))
+print(solution2('마라다나가'))
 print(solution2('pypy'))
 print(solution3('가나다라마'))
 print(solution3('pypy'))
