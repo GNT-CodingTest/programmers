@@ -56,7 +56,19 @@ def solution4(n):
     return answer
 
 
-# print(solution3(6234))
+print(solution3(6234))
 # print(solution4(6234))
 print(solution3(9))
-print(solution4(9))
+# print(solution4(9))
+
+# answer.reverse()
+# sum = 0
+# for i in range(len(answer)):
+#     sum += (answer[i] * (3 ** i))
+# return sum
+
+
+# a = ''
+# while n>0:
+#     a+=str(n%3)
+#     n = n//3
