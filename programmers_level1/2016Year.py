@@ -14,9 +14,7 @@ def solution(a, b):
 
     x = temp % len(days)
 
-    answer = days[x]
-
-    return answer
+    return days[x]
 
 
 solution(5, 24)
