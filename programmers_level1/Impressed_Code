@@ -1,0 +1,16 @@
+정렬 --
+
+    sorted(dict.items(), key=operator.itemgetter(0))
+    => key값으로 정렬
+    => sorted(dict.items())의 결과물의 0번째 아이템을 기준으로 정렬
+
+    => value로 정렬하려면
+    => sorted(dict.items(), key=operator.itemgetter(1))
+
+    n번째 문자를 기준으로 정렬
+        def sortkey(x):
+            return x[n]
+        strings.sort(key=sortkey)
+        ----------------------------------
+        sorted(strings, key=lambda x: x[n])
+
