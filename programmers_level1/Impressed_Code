@@ -14,3 +14,7 @@
         ----------------------------------
         sorted(strings, key=lambda x: x[n])
         설명 https://stackoverflow.com/questions/13669252/what-is-key-lambda
+
+    A => 65
+    a => 97
+    아스키 코드상으로 대문자가 이미 소문자보다 작음?!
