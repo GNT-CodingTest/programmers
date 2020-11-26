@@ -13,17 +13,22 @@
 def solution(n):
     answer = 0
     trichotomy_answer = []
+    test = False
 
     for key in range(16, -1, -1):
         value = 3 ** key
         if n >= value:
+            if not test:
+                test = True
             trichotomy_answer.append(n // value)
             n -= value * (n // value)
+        elif n < value and test:
+            trichotomy_answer.append(0)
         if n == 0:
             trichotomy_answer.append(0)
-
     for key, value in enumerate(trichotomy_answer):
-        answer += 3 ** key * value
+        answer += (3 ** key) * value
+
     return answer
 
 
