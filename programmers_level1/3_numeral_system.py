@@ -1,3 +1,4 @@
+# 정답아님
 def solution2(n):
 
     temp = []
@@ -18,6 +19,7 @@ def solution2(n):
     return answer
 
 
+# 이게 정답
 def solution3(n):
     temp = []
     while n > 2:
@@ -37,6 +39,7 @@ def solution3(n):
     return answer
 
 
+# 정답아님
 def solution4(n):
     temp = []
     while n > 3:
