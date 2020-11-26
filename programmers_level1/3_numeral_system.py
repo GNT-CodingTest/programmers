@@ -59,9 +59,10 @@ def solution4(n):
     return answer
 
 
-print(solution3(6234))
+# print(solution3(6234))
 # print(solution4(6234))
-print(solution3(9))
+# print(solution3(99999999))
+print(solution3(4782970))
 # print(solution4(9))
 
 # answer.reverse()
