@@ -13,4 +13,4 @@
         strings.sort(key=sortkey)
         ----------------------------------
         sorted(strings, key=lambda x: x[n])
-
+        설명 https://stackoverflow.com/questions/13669252/what-is-key-lambda
