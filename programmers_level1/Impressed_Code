@@ -34,3 +34,6 @@
 초기화 --
     앞에 변수가 1이면 앞에 변수를, 0이면 뒤에 변수를 리턴
     sorted([n for n in arr if n%divisor == 0]) or [-1]
+
+탐색 --
+    list.index(a)
