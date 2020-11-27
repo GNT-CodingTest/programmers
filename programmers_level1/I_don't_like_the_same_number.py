@@ -20,23 +20,23 @@
 
 
 # 100 / 100
-# def solution1(arr):
-#     answer = [arr[0]]
-#     flag = 0
-#
-#     for key, value in enumerate(arr):
-#         if arr[key] != answer[flag]:
-#             answer.append(arr[key])
-#             flag += 1
-#
-#     return answer
-
 def solution1(arr):
+    answer = [arr[0]]
+    flag = 0
+
+    for key, value in enumerate(arr):
+        if arr[key] != answer[flag]:
+            answer.append(arr[key])
+            flag += 1
+
+    return answer
+
+
+def solution1_1(arr):
     answer = []
 
     for value in arr:
         if [value] == answer[-1:]:
-            print(value, [value], answer[-1])
             continue
         answer.append(value)
 
@@ -53,5 +53,5 @@ def solution2(s):
 
 
 print(solution1([1, 1, 3, 3, 0, 1, 1]))
-# print(solution2([4, 4, 4, 3, 3]))
-# print(solution1([9, 8, 9, 8, 9]))
+print(solution1_1([4, 4, 4, 3, 3]))
+print(solution2([9, 8, 9, 8, 9]))
