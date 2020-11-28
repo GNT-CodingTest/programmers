@@ -12,7 +12,7 @@
 # 10	4
 # 5	    3
 
-
+# 에라토스테네스의 체
 def solution(n):
     answer = set(range(2, n+1))
 
