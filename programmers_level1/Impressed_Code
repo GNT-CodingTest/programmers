@@ -59,4 +59,5 @@ for else --
 
     else: print('10 보다 큰 수 없음')
 
-
+for value_a, value_b in zip(a, b):
+    인덱스가 같은 리스트의 변수 두개를 사용할 시 zip() 함수로 묶어서 실행
