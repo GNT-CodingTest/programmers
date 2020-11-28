@@ -11,20 +11,15 @@
 # n	    result
 # 10	4
 # 5	    3
-import math
 
 
 def solution(n):
-    answer = 0
+    answer = set(range(2, n+1))
 
     for value in range(2, n+1):
-        for value1 in range(2, value):
-            if value % value1 == 0:
-                break
-        else:
-            answer += 1
-
-    return answer
+        if value in answer:
+            answer -= set(range(value * 2, n + 1, value))
+    return len(answer)
 
 
 print(solution(10))
