@@ -18,3 +18,13 @@ def solution(s):
 
 print(solution('1234'))
 print(solution('-1234'))
+
+#                       str[::-1]은 주어진 스트링을 거꾸로
+# for idx, number in enumerate(str[::-1]):
+#         if number == '-':
+#             result *= -1
+#         else:
+#             각 자리에 10의 지수만큼 곱해서 더해줌
+#             result += int(number) * (10 ** idx)
+#
+#     return result
