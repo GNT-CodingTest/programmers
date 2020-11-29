@@ -64,3 +64,13 @@ for else --
 
 for value_a, value_b in zip(a, b):
     인덱스가 같은 리스트의 변수 두개를 사용할 시 zip() 함수로 묶어서 실행
+
+
+문자열 --
+    n만큼 오른쪽 정렬하고 빈칸은 0으로 채워라
+    rjust(n, 0)
+
+    'strstr'에서 'x'가 있으면 'X'로 바꿔라
+    sub('x', 'X', 'strstr')
+
+    replace('1','#')
