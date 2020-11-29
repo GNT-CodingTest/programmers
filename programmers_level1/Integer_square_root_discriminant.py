@@ -10,10 +10,11 @@
 # n	    return
 # 121	144
 # 3	    -1
+import math
+
 
 def solution(n):
-    answer = 0
-    return
+    return (math.sqrt(n)+1)**2 if math.sqrt(n) % 1 == 0 else -1
 
 
 print(solution(121))
