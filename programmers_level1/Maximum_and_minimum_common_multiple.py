@@ -29,20 +29,8 @@ def solution1(n, m):
     return answer
 
 
-def solution2(n, m):
-    c, d = max(n, m), min(n, m)
-    t = 1
-
-    while t > 0:
-        t = c % d
-        c, d = d, t
-    answer = [c, int(n * m / c)]
-
-    return answer
-
-
 # 제일 빠름
-def solution3(n, m):
+def solution2(n, m):
     gcd = lambda a, b: b if not a % b else gcd(b, a % b)
     lcm = lambda a, b: a*b//gcd(a, b)
     return [gcd(n, m), lcm(n, m)]
