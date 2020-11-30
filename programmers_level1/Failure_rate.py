@@ -32,9 +32,8 @@
 def solution1(n, stages):
     answer = {}
     # print(' 1  2  3  4  5  C')
-
     for key in range(1, n+1):
-        if len([x for x in stages if x >= key]) == 0:
+        if len([x for x in stages if x == key]) == 0:
             answer[key] = 0
         else:
             answer[key] = len([x for x in stages if x == key])/len([x for x in stages if x >= key])
@@ -55,5 +54,11 @@ def solution2(n, stages):
     return sorted(result, key=lambda x: result[x], reverse=True)
 
 
-print(solution1(5, [2, 1, 2, 6, 2, 4, 3, 3]))
-print(solution2(4, [4, 4, 4, 4, 4]))
+print(solution1(4, [4, 4, 4, 4, 4]))
+
+print(solution2(5, [2, 1, 2, 6, 2, 4, 3, 3]))
+# [1, 2, 2, 2, 3, 3, 4, 6]
+# [2, 2, 2, 3, 3, 4, 6]
+# [3, 3, 4, 6]
+# [4, 6]
+# [6]
