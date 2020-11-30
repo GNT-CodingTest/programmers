@@ -15,6 +15,15 @@
         sorted(strings, key=lambda x: x[n])
         설명 https://stackoverflow.com/questions/13669252/what-is-key-lambda
 
+    a = {1: 5, 2: 6}
+    print(list(map(lambda x: x*2, a)))
+    => 2, 4
+
+    딕셔너리 value값으로 정렬
+    result = {}
+    return sorted(result, key=lambda x: result[x], reverse=True)
+
+
     A => 65
     a => 97
     아스키 코드상으로 대문자가 이미 소문자보다 작음?!
