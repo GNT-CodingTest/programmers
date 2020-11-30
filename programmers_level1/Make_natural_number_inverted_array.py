@@ -11,6 +11,7 @@
 
 
 def solution(n):
+    # 뒤에서 접근하려고 len(str(n))+1
     return [int(str(n)[-x]) for x in range(1, len(str(n))+1)]
 
 # str(n) = '12345'
@@ -20,3 +21,5 @@ def solution(n):
 # [int(str(n)[-x])] = [5, 4, 3, 2, 1]
 
 print(solution(12345))
+
+print(list(map(int, reversed(str(12345)))))
