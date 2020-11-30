@@ -15,6 +15,15 @@
         sorted(strings, key=lambda x: x[n])
         설명 https://stackoverflow.com/questions/13669252/what-is-key-lambda
 
+    a = {1: 5, 2: 6}
+    print(list(map(lambda x: x*2, a)))
+    => 2, 4
+
+    딕셔너리 value값으로 정렬
+    result = {}
+    return sorted(result, key=lambda x: result[x], reverse=True)
+
+
     A => 65
     a => 97
     아스키 코드상으로 대문자가 이미 소문자보다 작음?!
@@ -74,3 +83,26 @@ for value_a, value_b in zip(a, b):
     sub('x', 'X', 'strstr')
 
     replace('1','#')
+
+정규표현식 --
+    import re
+
+    # + => 1회 이상, * => 0회 이상, ? => 0번 또는 1번
+    # 유니코드 (str) 패턴일 때: \d => [0-9]
+    p = re.compile('(\d+)([SDT])([*#]?)') <= 패턴
+
+    dart = p.findall(dart_result) <= 패턴에 맞게
+    # dart => [('1', 'S', ''), ('2', 'D', '*'), ('3', 'T', '')]
+
+    => 정규표현식으로 데이터 마음대로 처리
+
+수학 --
+
+    def solution3(n, m):
+        최대 공약수
+        gcd = lambda a, b: b if not a % b else gcd(b, a % b)
+        최소 공배수
+        lcm = lambda a, b: a*b//gcd(a, b)
+
+        return [gcd(n, m), lcm(n, m)]
+
