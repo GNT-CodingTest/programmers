@@ -32,18 +32,15 @@ def solution(priorities, location):
     flag = location  # 요청한 문서의 순번
     temp = 0         # pop(0) 을 담을 변수
 
-    print("priorities:", priorities, "flag:", flag, end='\n\n')
+    print("priorities:", priorities, "flag:", flag)
+    print("answer:", answer, "priorities:", priorities, end='\n\n')
     while len(priorities):
         if len([x for x in priorities if x > priorities[0]]):
             flag = (flag + len(priorities) - 1) % (len(priorities))
             temp = priorities.pop(0)
             priorities.append(temp)
 
-            # flag = (flag + 6) % (len(priorities) + 1)
-            # temp = priorities.pop(0)
-            # priorities.append(temp)
-
-        print("priorities:", priorities, "flag:", flag, end='\n\n')
+        print("priorities:", priorities, "flag:", flag)
 
         if len([x for x in priorities if x > priorities[0]]) == 0:
             if flag == 0:
@@ -51,8 +48,9 @@ def solution(priorities, location):
             priorities.pop(0)
             answer += 1
             flag -= 1
-            print("answer:", answer, "priorities:", priorities)
+        print("answer:", answer, "priorities:", priorities, end='\n\n')
 
 
-print(solution([2, 1, 3, 2], 2))
-print(solution([1, 1, 9, 1, 1, 1], 0))
+print("answer:", solution([2, 1, 3, 2], 2))
+print("\n\n")
+print("answer:", solution([1, 1, 9, 1, 1, 1], 0))
