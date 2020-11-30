@@ -85,4 +85,15 @@ for value_a, value_b in zip(a, b):
     dart = p.findall(dart_result) <= 패턴에 맞게
     # dart => [('1', 'S', ''), ('2', 'D', '*'), ('3', 'T', '')]
 
-    => 정규표현식으로 데이터 마음대로 조리
+    => 정규표현식으로 데이터 마음대로 처리
+
+수학 --
+
+    def solution3(n, m):
+        최대 공약수
+        gcd = lambda a, b: b if not a % b else gcd(b, a % b)
+        최소 공배수
+        lcm = lambda a, b: a*b//gcd(a, b)
+
+        return [gcd(n, m), lcm(n, m)]
+
