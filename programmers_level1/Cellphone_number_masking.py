@@ -11,8 +11,9 @@
 # 01033334444	*******4444
 # 027778888	    *****8888
 
-def solution(phone_number):
-    return '*' * len(phone_number[-len(phone_number):-4]) + phone_number[-4::]
+def solution(phone_number):  # -len(phone_number) == 첫번째 문자 인덱스
+    # return '*' * len(phone_number[-len(phone_number):-4]) + phone_number[-4::]
+    return '*' * (len(phone_number)-4) + phone_number[-4:]
 
 
 print(solution('01033334444'))
