@@ -30,14 +30,16 @@
 
 
 def solution(n, stages):
-    answer = [0] * n
-    # print(sorted(stages))
-    print(' 1  2  3  4  5  C')
-    # print(len([x for x in stages if x == 1])/len([x for x in stages if x >= 1]))
+    answer = {}
+    # print(' 1  2  3  4  5  C')
 
     for key in range(1, n+1):
-        answer[key-1] = len([x for x in stages if x == key])/len([x for x in stages if x >= key])
-    return answer
+        if len([x for x in stages if x >= key]) == 0:
+            answer[key] = 0
+        else:
+            answer[key] = len([x for x in stages if x == key])/len([x for x in stages if x >= key])
+
+    return sorted(answer, key=lambda x: answer[x], reverse=True)
 
 
 print(solution(5, [2, 1, 2, 6, 2, 4, 3, 3]))
