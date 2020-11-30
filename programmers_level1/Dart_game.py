@@ -52,3 +52,32 @@ print(solution('1S*2T*3S'))
 print(solution('1D#2S*3S'))
 print(solution('1T2D3D#'))
 print(solution('1D2S3T*'))
+
+# 정규표현식(re)
+# 메타문자 $()*+.?[\^{|
+# \( => '('
+import re
+
+
+def solution1(dart_result):
+    bonus = {'S': 1, 'D': 2, 'T': 3}
+    option = {'': 1, '*': 2, '#': -1}
+
+    # + => 1회 이상, * => 0회 이상, ? => 0번 또는 1번
+    # 유니코드 (str) 패턴일 때: \d => [0-9]
+    p = re.compile('(\d+)([SDT])([*#]?)')
+    dart = p.findall(dart_result)
+    # dart => [('1', 'S', ''), ('2', 'D', '*'), ('3', 'T', '')]
+
+    for i in range(len(dart)):
+        if dart[i][2] == '*' and i > 0:
+            dart[i-1] *= 2
+        dart[i] = int(dart[i][0]) ** bonus[dart[i][1]] * option[dart[i][2]]
+
+    answer = sum(dart)
+    return answer
+
+
+solution1('1S2D*3T')
+
+# point = ['10' if i == 'k' else i for i in dartResult]
