@@ -74,3 +74,13 @@ for value_a, value_b in zip(a, b):
     sub('x', 'X', 'strstr')
 
     replace('1','#')
+
+정규화 --
+    import re
+
+    # + => 1회 이상, * => 0회 이상, ? => 0번 또는 1번
+    # 유니코드 (str) 패턴일 때: \d => [0-9]
+    p = re.compile('(\d+)([SDT])([*#]?)') <= 패턴
+
+    dart = p.findall(dart_result) <= 패턴에 맞게
+    # dart => [('1', 'S', ''), ('2', 'D', '*'), ('3', 'T', '')]
