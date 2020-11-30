@@ -29,7 +29,7 @@
 # 4	 [4,4,4,4,4]	    [4,1,2,3]
 
 
-def solution(n, stages):
+def solution1(n, stages):
     answer = {}
     # print(' 1  2  3  4  5  C')
 
@@ -42,5 +42,18 @@ def solution(n, stages):
     return sorted(answer, key=lambda x: answer[x], reverse=True)
 
 
-print(solution(5, [2, 1, 2, 6, 2, 4, 3, 3]))
-# print(solution(4, [4, 4, 4, 4, 4]))
+def solution2(n, stages):
+    result = {}
+    denominator = len(stages)
+    for stage in range(1, n+1):
+        if denominator != 0:
+            count = stages.count(stage)
+            result[stage] = count / denominator
+            denominator -= count
+        else:
+            result[stage] = 0
+    return sorted(result, key=lambda x: result[x], reverse=True)
+
+
+print(solution1(5, [2, 1, 2, 6, 2, 4, 3, 3]))
+print(solution2(4, [4, 4, 4, 4, 4]))
