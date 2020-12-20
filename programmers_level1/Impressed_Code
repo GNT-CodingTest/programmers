@@ -98,7 +98,7 @@ for value_a, value_b in zip(a, b):
 
 수학 --
 
-    def solution3(n, m):
+    def solution(n, m):
         최대 공약수
         gcd = lambda a, b: b if not a % b else gcd(b, a % b)
         최소 공배수
