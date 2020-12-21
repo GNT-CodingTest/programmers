@@ -74,6 +74,9 @@ for else --
 for value_a, value_b in zip(a, b):
     인덱스가 같은 리스트의 변수 두개를 사용할 시 zip() 함수로 묶어서 실행
 
+q, r = divmod(x, y)
+    q은 x를 y로 나눈 값, 즉 몫 / r은 x를 y로 나눈 나머지
+
 
 문자열 --
     n만큼 오른쪽 정렬하고 빈칸은 0으로 채워라
