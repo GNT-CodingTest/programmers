@@ -109,3 +109,5 @@ q, r = divmod(x, y)
 
         return [gcd(n, m), lcm(n, m)]
 
+    두 수 사이의 합
+    (abs(a-b)+1)*(a+b)//2
