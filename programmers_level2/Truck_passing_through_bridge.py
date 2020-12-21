@@ -36,7 +36,7 @@ def solution(bridge_length, weight, truck_weights):
     answer = 0
     bridge = [0] * bridge_length
 
-    # print(f"first  answer: {answer} / bridge: {bridge} / truck: {truck_weights}")
+    print(f"answer: {answer} / bridge: {bridge} / truck: {truck_weights}")
     while truck_weights or bridge:
         if truck_weights:
             if bridge[0]:
@@ -49,10 +49,10 @@ def solution(bridge_length, weight, truck_weights):
         elif bridge:
             bridge.pop(0)
         answer += 1
-        # print(f"answer: {answer} / bridge: {bridge} / truck: {truck_weights}")
+        print(f"answer: {answer} / bridge: {bridge} / truck: {truck_weights}")
     return answer
 
 
 print(solution(2, 10, [7, 4, 5, 6]))
-print(solution(100, 100, [10]))
-print(solution(100, 100, [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]))
+# print(solution(100, 100, [10]))
+# print(solution(100, 100, [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]))
