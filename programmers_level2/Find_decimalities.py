@@ -67,6 +67,9 @@ print(solution('011'))
 
 # import itertools
 #
-# pool = ['A', 'B', 'C']
-# print(list(map(''.join, itertools.permutations(pool)))) # 3개의 원소로 수열 만들기
-# print(list(map(''.join, itertools.permutations(pool, 2)))) # 2개의 원소로 수열 만들기
+# permutations('ABCD', 2) --> AB AC AD BA BC BD CA CB CD DA DB DC
+# permutations(range(3)) --> 012 021 102 120 201 210
+
+# 어떤 자연수 n이 소수임을 판정하기 위해서 # |√n|까지만 진행하면 되는데,
+# 수가 수를 나누기 위해서는 그 몫이 항상 필요하며
+# 나누는 수와 몫 중 어느 하나는 반드시 √n 이하이기 때문이다.
