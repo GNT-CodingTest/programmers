@@ -137,6 +137,6 @@ def solution(p):
 #                 return '('+solution(p[i+1:])+')'+''.join(list(map(lambda x: '(' if x == ')' else ')', p[1:i])))
 
 
-# print(solution("(()())()"))
-# print(solution(")("))
+print(solution("(()())()"))
+print(solution(")("))
 print(solution("()))((()"))
