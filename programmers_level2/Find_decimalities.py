@@ -8,7 +8,7 @@ def solution(numbers):
     for number in numbers:
         num_list.append(number)
 
-    num_set = set(map(int, test(num_list)))
+    num_set = set(map(int, dfs(num_list)))
     print(num_set)
 
     sieve = eratosthenes_sieve(max(num_set))
@@ -20,7 +20,7 @@ def solution(numbers):
     return answer
 
 
-def test(num_list):
+def dfs(num_list):
 
     x = set()
     for i in range(len(num_list)):
@@ -29,7 +29,7 @@ def test(num_list):
         x.add(temp)
 
         if num_list:
-            y.extend(test(num_list.copy()))
+            y.extend(dfs(num_list.copy()))
         else:
             return temp
 
