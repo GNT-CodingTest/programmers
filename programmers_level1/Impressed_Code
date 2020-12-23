@@ -111,3 +111,12 @@ q, r = divmod(x, y)
 
     두 수 사이의 합
     (abs(a-b)+1)*(a+b)//2
+
+    순열, 조합
+    import itertools
+
+    permutations('ABCD', 2) --> AB AC AD BA BC BD CA CB CD DA DB DC
+    permutations(range(3)) --> 012 021 102 120 201 210
+
+    combinations('ABCD', 2) --> AB AC AD BC BD CD
+    combinations(range(4), 3) --> 012 013 023 123
