@@ -75,7 +75,9 @@ def solution(s):
                 char = s[idx:idx + step]
                 cnt = 1
                 temp.append(s[idx:idx + step])
+
         temp = ''.join(temp)
+
         if answer:
             answer = answer if len(answer) <= len(temp) else temp
         else:
@@ -86,8 +88,7 @@ def solution(s):
     return len(answer)
 
 
-# solution("aabbaccc")
-solution("a")
+print(solution("aabbaccc"))
 # print(solution("ababcdcdababcdcd"))
 # print(solution("abcabcdede"))
 # print(solution("abcabcabcabcdededededede"))
