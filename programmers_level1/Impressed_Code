@@ -87,6 +87,9 @@ q, r = divmod(x, y)
 
     replace('1','#')
 
+    문자열에서 len()은 속도를 잡아 먹는다.
+    __len__이 없어서 그런듯
+
 정규표현식 --
     import re
 
