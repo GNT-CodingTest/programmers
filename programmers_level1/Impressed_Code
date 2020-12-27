@@ -1,5 +1,4 @@
 정렬 --
-
     sorted(dict.items(), key=operator.itemgetter(0))
     => key값으로 정렬
     => sorted(dict.items())의 결과물의 0번째 아이템을 기준으로 정렬
