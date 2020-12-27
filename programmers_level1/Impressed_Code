@@ -52,14 +52,17 @@
     앞에 변수가 1이면 앞에 변수를, 0이면 뒤에 변수를 리턴
     sorted([n for n in arr if n%divisor == 0]) or [-1]
 
+
 탐색 --
     list.index(a)
+
 
 체크(확인) --
     isdigit() 숫자인가
     isalpha() 알파벳인가
     islower()
     isupper()
+
 
 for else --
     for문이 중간에 break 등으로 끊기지 않고, 끝까지 수행 되었을 때 수행하는 코드를 담고 있습니다.
@@ -71,11 +74,8 @@ for else --
 
     else: print('10 보다 큰 수 없음')
 
-for value_a, value_b in zip(a, b):
+    for value_a, value_b in zip(a, b):
     인덱스가 같은 리스트의 변수 두개를 사용할 시 zip() 함수로 묶어서 실행
-
-q, r = divmod(x, y)
-    q은 x를 y로 나눈 값, 즉 몫 / r은 x를 y로 나눈 나머지
 
 
 문자열 --
@@ -90,6 +90,7 @@ q, r = divmod(x, y)
     문자열에서 len()은 속도를 잡아 먹는다.
     __len__이 없어서 그런듯
 
+
 정규표현식 --
     import re
 
@@ -102,7 +103,10 @@ q, r = divmod(x, y)
 
     => 정규표현식으로 데이터 마음대로 처리
 
+
 수학 --
+    q, r = divmod(x, y)
+    q은 x를 y로 나눈 값, 즉 몫 / r은 x를 y로 나눈 나머지
 
     def solution(n, m):
         최대 공약수
