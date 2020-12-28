@@ -27,6 +27,11 @@
     a => 97
     아스키 코드상으로 대문자가 이미 소문자보다 작음?!
 
+    import functools
+    cmp_to_key
+        x-y값이 음수가 나오면, 정상적으로 진행해서 다음 요소 두개를 계산한다.
+        x-y값이 양수가 나오면,  다른 요소와 비교해 정렬시킨다.
+
     파이썬 정렬
     https://docs.python.org/ko/3/howto/sorting.html
 
