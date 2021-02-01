@@ -1,6 +1,7 @@
-create_py.py
 venv/
 .idea/
 GforG/
 baek01/
 baek02/
+/book/
+create_py.py
